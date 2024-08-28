@@ -6,6 +6,7 @@ Name: SIERRA SHAW
 | Aug 24 |   2:15-2:45pm   |                                                                                                                                                                                                                                              I began to code the encryptions for #1-3 and started to relearn Java coding. |
 | Aug 24 |   5:45-6:15pm   |                                                                                                                    I finished the coding encryptions for #1-3 but my tester file won't run so I tried to debug that and failed, and I also tried to find out what the encryption scheme was for #4 but failed to succeed. |
 | Aug 25 |   5:45-6:10pm   | Again failed to succeed on finding the encryption scheme for #4. I thought that it would relate to the ASCII value of each symbol but even then I can't find the pattern going on from there (I looked at the last 3-digit number of the value, tried to see if there was just a shift, added the numbers together, etc.) |
+| Aug 28 |  10:00-10:30am  |                                                                                                                                                                                                                                                        Finally got my tester file to work and debugged my issues on #1-3. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.

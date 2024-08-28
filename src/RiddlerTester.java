@@ -6,6 +6,7 @@ public class RiddlerTester {
     private Riddler solver = new Riddler();
     private String encrypted = "";
 
+    @org.junit.Test
     @Test
     public void testOne() {
         setTestData("1");
