@@ -10,26 +10,16 @@ public class Riddler {
 
     public String decryptOne(String encrypted) {
         String decrypted = "";
-        int shift = 0;
+        char shifted = ' ';
         for (int i = 0; i < encrypted.length(); i++) {
             if (Character.isAlphabetic(encrypted.charAt(i))) {
                 if (Character.isUpperCase(encrypted.charAt(i))) {
-                    if ((int)encrypted.charAt(i) + 9 > 90) {
-                        shift = 64 + (int)encrypted.charAt(i) + 9 - 90;
-                    }
-                    else {
-                        shift = (int)encrypted.charAt(i) + 9;
-                    }
+                    shifted = (char)((encrypted.charAt(i) - 'A' + 9) % 26 + 'A');
                 }
                 else {
-                    if ((int)encrypted.charAt(i) + 9 > 122) {
-                        shift = 96 + (int)encrypted.charAt(i) + 9 - 122;
-                    }
-                    else {
-                        shift = (int)encrypted.charAt(i) + 9;
-                    }
+                    shifted = (char)((encrypted.charAt(i) - 'a' + 9) % 26 + 'a');
                 }
-                decrypted += (char) shift;
+                decrypted += shifted;
             }
             else {
                 decrypted += encrypted.charAt(i);
@@ -76,9 +66,13 @@ public class Riddler {
 
     public String decryptFour(String encrypted) {
         String decrypted = "";
-
+        char shifted = ' ';
         // TODO: Complete the decryptFour() function.
-
+        for (int i = 0; i < encrypted.length(); i++) {
+            shifted = (char) ((encrypted.codePointAt(i) - 9951) + ' ');
+            decrypted += shifted;
+        }
+        System.out.println(decrypted);
         return decrypted;
     }
 }
